@@ -35,10 +35,10 @@ if(promedio >= 7){
 calcularNotas(cantidadDeNotas)
 
 function pedirNota(num){
-    let nota=Number(prompt("ingresar nota: " + num + "del alumno" + nombre + apellido ))
+    let nota=Number(prompt("ingresar nota: " + num + " del alumno " + nombre + " " + apellido ))
     
     while(isNaN(nota) && (nota <=0 || nota >10)){
-        nota =Number(prompt("ingresar nota: " + num + "del alumno" + nombre + apellido ))
+        nota =Number(prompt("ingresar nota: " + num + "del alumno" + nombre +" " + apellido ))
     }
     console.log(nota)
     return nota
