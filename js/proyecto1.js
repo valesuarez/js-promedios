@@ -25,9 +25,9 @@ function calcularNotas(cantidadDeNotas){
 if(promedio >= 7){
     document.write("el alumno " + nombre + " " + apellido + " promociona la materia con un promedio de " + promedio)
 }else if(promedio <= 6 && promedio >= 4){
-    document.write("el alumno " + nombre + " " + apellido + " debe rendir recuperatorio ")
+    document.write("el alumno " + nombre + " " + apellido + " debe rendir recuperatorio, tiene un promedio de  " + promedio)
 }else {
-    document.write("el alumno " + nombre + " " + apellido + " debe recursar la materia ") 
+    document.write("el alumno " + nombre + " " + apellido + " debe recursar la materia, por tener un promedio de " + promedio) 
 }
 
 }
@@ -37,7 +37,7 @@ calcularNotas(cantidadDeNotas)
 function pedirNota(num){
     let nota=Number(prompt("ingresar nota: " + num + " del alumno " + nombre + " " + apellido ))
     
-    while(isNaN(nota) && (nota <=0 || nota >10)){
+    while(isNaN(nota) || (nota <=0 || nota >10)){
         nota =Number(prompt("ingresar nota: " + num + "del alumno" + nombre +" " + apellido ))
     }
     console.log(nota)
